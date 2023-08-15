@@ -9,6 +9,7 @@ def calculate_bmi(weight, height):
 
 def interpret_bmi(bmi):
     # 解釋函數與之前相同，這裡省略不寫
+    pass
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
