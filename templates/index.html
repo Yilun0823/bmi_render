@@ -4,53 +4,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>BMI 計算器</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            padding: 20px;
-            text-align: center;
-        }
-
-        h1 {
-            font-size: 24px;
-        }
-
-        form {
-            text-align: center;
-            max-width: 300px;
-            margin: 0 auto;
-        }
-
-        label {
-            display: block;
-            margin-bottom: 5px;
-            text-align: left;
-        }
-
-        input[type="text"] {
-            width: 100%;
-            padding: 8px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 4px;
-            box-sizing: border-box;
-        }
-
-        button[type="submit"] {
-            background-color: #4CAF50;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 4px;
-            cursor: pointer;
-            width: 100%;
-        }
-
         @media screen and (max-height: 600px) {
             body {
-                padding-bottom: 100px; /* Adjust this value as needed */
+                padding-bottom: 300px; /* Adjust this value as needed */
             }
         }
     </style>
+    <script>
+        function adjustLayoutOnKeyboard() {
+            const initialViewportHeight = window.innerHeight;
+
+            window.addEventListener('resize', () => {
+                const currentViewportHeight = window.innerHeight;
+
+                if (initialViewportHeight > currentViewportHeight) {
+                    document.body.style.paddingBottom = '300px'; /* Adjust this value as needed */
+                } else {
+                    document.body.style.paddingBottom = '20px'; /* Or your original padding value */
+                }
+            });
+        }
+
+        window.addEventListener('DOMContentLoaded', adjustLayoutOnKeyboard);
+    </script>
 </head>
 <body>
     <h1>BMI 計算器</h1>
