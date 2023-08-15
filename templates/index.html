@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
     <title>BMI 計算器</title>
     <style>
         body {
@@ -43,6 +43,12 @@
             border-radius: 4px;
             cursor: pointer;
             width: 100%;
+        }
+
+        @media screen and (max-height: 600px) {
+            body {
+                padding-bottom: 100px; /* Adjust this value as needed */
+            }
         }
     </style>
 </head>
