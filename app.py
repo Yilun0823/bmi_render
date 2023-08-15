@@ -8,8 +8,18 @@ def calculate_bmi(weight, height):
     return bmi
 
 def interpret_bmi(bmi):
-    # 解釋函數與之前相同，這裡省略不寫
-    pass
+    if bmi < 18.5:
+        return "過輕"
+    elif bmi < 24:
+        return "正常"
+    elif bmi < 27:
+        return "過重"
+    elif bmi < 30:
+        return "輕度肥胖"
+    elif bmi < 35:
+        return "中度肥胖"
+    else:
+        return "重度肥胖"
 
 @app.route('/', methods=['GET', 'POST'])
 def index():
